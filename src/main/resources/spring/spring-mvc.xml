@@ -15,7 +15,7 @@
 
     <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
     <!--要对 Controller 进行 AOP 日志处理，只能放在这里，如果单独放一个 xml 文件是没有效果的-->
-    <context:component-scan base-package="com.youmeek.ssm.**.controller,com.youmeek.ssm.aop,com.youmeek.ssm.interceptor"/>
+    <context:component-scan base-package="com.sylar.ssm.**.controller,com.sylar.ssm.aop,com.sylar.ssm.interceptor"/>
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
 
@@ -23,7 +23,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**" /> <!--拦截所有请求-->
-            <bean class="com.youmeek.ssm.interceptor.SystemInitInterceptor">
+            <bean class="com.sylar.ssm.interceptor.SystemInitInterceptor">
                 <property name="ignoreUrl">
                     <list>
                         <!-- 完整路径 -->

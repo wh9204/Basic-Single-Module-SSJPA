@@ -1,11 +1,12 @@
-package com.youmeek.ssm.module.user.service;
+package com.sylar.ssm.module.user.service;
 
-import com.youmeek.ssm.module.user.pojo.SysUser;
+import com.sylar.ssm.module.user.pojo.SysUser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import java.util.List;
+
 
 public interface SysUserService {
 	

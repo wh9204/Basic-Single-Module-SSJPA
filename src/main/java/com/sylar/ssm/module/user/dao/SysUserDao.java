@@ -1,7 +1,7 @@
-package com.youmeek.ssm.module.user.dao;
+package com.sylar.ssm.module.user.dao;
 
 
-import com.youmeek.ssm.module.user.pojo.SysUser;
+import com.sylar.ssm.module.user.pojo.SysUser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -22,8 +22,8 @@ import java.util.List;
 
 @Repository
 public interface SysUserDao extends JpaRepository<SysUser, Long> {
-	
-	
+
+	@QueryHints(value = {@QueryHint(name = "org.hibernate.cacheable", value = "true")})
 	SysUser findBySysUserId(Long sysUserId);
 	
 	SysUser findBySysUserLoginName(String sysUserLoginName);
@@ -80,5 +80,6 @@ public interface SysUserDao extends JpaRepository<SysUser, Long> {
 	@Modifying//如果是更新操作，需要写这个标识
 	@Query("update SysUser u set u.sysUserLoginName = ?1,u.sysUserEmail = ?2 where u.sysUserMobile = ?3 ")
 	int updateSysUserBySysUserMobile(String sysUserLoginName, String sysUserEmail, String sysUserMobile);
-	
+
+
 }  

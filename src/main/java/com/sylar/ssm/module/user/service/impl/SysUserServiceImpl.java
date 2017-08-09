@@ -1,8 +1,8 @@
-package com.youmeek.ssm.module.user.service.impl;
+package com.sylar.ssm.module.user.service.impl;
 
-import com.youmeek.ssm.module.user.dao.SysUserDao;
-import com.youmeek.ssm.module.user.pojo.SysUser;
-import com.youmeek.ssm.module.user.service.SysUserService;
+import com.sylar.ssm.module.user.dao.SysUserDao;
+import com.sylar.ssm.module.user.pojo.SysUser;
+import com.sylar.ssm.module.user.service.SysUserService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;

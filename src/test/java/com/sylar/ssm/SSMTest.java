@@ -1,7 +1,7 @@
-package com.youmeek.ssm;
+package com.sylar.ssm;
 
-import com.youmeek.ssm.module.user.pojo.SysUser;
-import com.youmeek.ssm.module.user.service.SysUserService;
+import com.sylar.ssm.module.user.pojo.SysUser;
+import com.sylar.ssm.module.user.service.SysUserService;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,8 +20,8 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:spring/applicationContext*.xml"})
 public class SSMTest {
-	
-	
+
+
 	@Resource
 	private SysUserService sysUserService;
 	
@@ -43,7 +43,7 @@ public class SSMTest {
 		SysUser sysUser = new SysUser();
 		
 		sysUser.setSysUserLoginName("YouMeek88");
-		sysUser.setSysUserLoginPassword("e10adc3949ba59abbe56e057f20f883e");
+		sysUser.setSysUserPassword("e10adc3949ba59abbe56e057f20f883e");
 		sysUser.setSysUserIsDelete("N");
 		sysUser.setSysUserRegisterDatetime(new Date());
 		sysUser.setSysUserEmail("363379444@qq.com");
@@ -60,7 +60,7 @@ public class SSMTest {
 		SysUser sysUser = new SysUser();
 		
 		sysUser.setSysUserLoginName("YouMeek99");
-		sysUser.setSysUserLoginPassword("e10adc3949ba59abbe56e057f20f883e");
+		sysUser.setSysUserPassword("e10adc3949ba59abbe56e057f20f883e");
 		sysUser.setSysUserIsDelete("N");
 		sysUser.setSysUserRegisterDatetime(new Date());
 		sysUser.setSysUserEmail("363379444@qq.com");
@@ -79,7 +79,7 @@ public class SSMTest {
 		//只要对象中含有主键，它会自动判断进行更新还是新增
 		sysUser.setSysUserId(6L);
 		sysUser.setSysUserLoginName("YouMeek66");
-		sysUser.setSysUserLoginPassword("e10adc3949ba59abbe56e057f20f883e");
+		sysUser.setSysUserPassword("e10adc3949ba59abbe56e057f20f883e");
 		sysUser.setSysUserIsDelete("N");
 		sysUser.setSysUserRegisterDatetime(new Date());
 		sysUser.setSysUserEmail("363379444@qq.com");

@@ -1,4 +1,4 @@
-package com.youmeek.ssm.aop.log;
+package com.sylar.ssm.aop.log;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -26,7 +26,7 @@ public class LogAspect {
 	private Long endTime = 0L;
 	
 	//对 Controller 进行日志记录
-	@Before("com.youmeek.ssm.aop.log.LogPointcut.inControllerLayer()")
+	@Before("com.sylar.ssm.aop.log.LogPointcut.inControllerLayer()")
 	public void logBefore(JoinPoint joinPoint) {
 		String className = joinPoint.getThis().toString();
 		String methodName = joinPoint.getSignature().getName();//获得方法名
@@ -49,7 +49,7 @@ public class LogAspect {
 		
 	}
 	
-	@After("com.youmeek.ssm.aop.log.LogPointcut.inControllerLayer()")
+	@After("com.sylar.ssm.aop.log.LogPointcut.inControllerLayer()")
 	public void logAfter() {
 		LOG.info("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\/////////////////////////////////////");
 		endTime = System.currentTimeMillis();

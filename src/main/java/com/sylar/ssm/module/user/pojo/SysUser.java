@@ -1,4 +1,4 @@
-package com.youmeek.ssm.module.user.pojo;
+package com.sylar.ssm.module.user.pojo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.annotations.Cache;
@@ -34,8 +34,8 @@ public class SysUser implements Serializable {
 	@Column(name = "sys_user_login_name", nullable = false)
 	private String sysUserLoginName;
 	
-	@Column(name = "sys_user_login_password", nullable = false)
-	private String sysUserLoginPassword;
+	@Column(name = "sys_user_password", nullable = false)
+	private String sysUserPassword;
 	
 	@Column(name = "sys_user_is_delete", nullable = false)
 	private String sysUserIsDelete;
@@ -49,7 +49,18 @@ public class SysUser implements Serializable {
 	
 	@Column(name = "sys_user_mobile", nullable = false)
 	private String sysUserMobile;
-	
+
+    public String getSysUserName() {
+        return sysUserName;
+    }
+
+    public void setSysUserName(String sysUserName) {
+        this.sysUserName = sysUserName;
+    }
+
+    @Column(name = "sys_user_name", nullable = false)
+	private  String sysUserName;
+
 	public Long getSysUserId() {
 		return sysUserId;
 	}
@@ -66,12 +77,12 @@ public class SysUser implements Serializable {
 		this.sysUserLoginName = sysUserLoginName;
 	}
 	
-	public String getSysUserLoginPassword() {
-		return sysUserLoginPassword;
+	public String getSysUserPassword() {
+		return sysUserPassword;
 	}
 	
-	public void setSysUserLoginPassword(String sysUserLoginPassword) {
-		this.sysUserLoginPassword = sysUserLoginPassword;
+	public void setSysUserPassword(String sysUserPassword) {
+		this.sysUserPassword = sysUserPassword;
 	}
 	
 	public String getSysUserIsDelete() {
@@ -107,17 +118,18 @@ public class SysUser implements Serializable {
 	public void setSysUserMobile(String sysUserMobile) {
 		this.sysUserMobile = sysUserMobile;
 	}
-	
-	@Override
-	public String toString() {
-		return "SysUser{" +
-				"sysUserId=" + sysUserId +
-				", sysUserLoginName='" + sysUserLoginName + '\'' +
-				", sysUserLoginPassword='" + sysUserLoginPassword + '\'' +
-				", sysUserIsDelete='" + sysUserIsDelete + '\'' +
-				", sysUserRegisterDatetime=" + sysUserRegisterDatetime +
-				", sysUserEmail='" + sysUserEmail + '\'' +
-				", sysUserMobile='" + sysUserMobile + '\'' +
-				'}';
-	}
+
+    @Override
+    public String toString() {
+        return "SysUser{" +
+                "sysUserId=" + sysUserId +
+                ", sysUserLoginName='" + sysUserLoginName + '\'' +
+                ", sysUserPassword='" + sysUserPassword + '\'' +
+                ", sysUserIsDelete='" + sysUserIsDelete + '\'' +
+                ", sysUserRegisterDatetime=" + sysUserRegisterDatetime +
+                ", sysUserEmail='" + sysUserEmail + '\'' +
+                ", sysUserMobile='" + sysUserMobile + '\'' +
+                ", sysUserName='" + sysUserName + '\'' +
+                '}';
+    }
 }

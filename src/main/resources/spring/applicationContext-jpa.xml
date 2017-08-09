@@ -25,7 +25,7 @@ http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
         <!-- 指定Jpa持久化实现厂商类,这里以Hibernate为例 -->
         <property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter"/>
         <!-- 指定Entity实体类包路径 -->
-        <property name="packagesToScan" value="com.youmeek.**.pojo"/>
+        <property name="packagesToScan" value="com.sylar.**.pojo"/>
         <!-- 指定JPA属性；如Hibernate中指定是否显示SQL的是否显示、方言等 -->
         <property name="jpaProperties">
             <!--hibernate 官网说明这些配置属性：http://docs.jboss.org/hibernate/orm/3.3/reference/en/html/session-configuration.html-->
@@ -71,7 +71,7 @@ http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
     <bean id="hibernateJpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
 
     <!-- 重要配置：启用扫描并自动创建代理的功能  -->
-    <jpa:repositories base-package="com.youmeek.**.dao" transaction-manager-ref="transactionManager" entity-manager-factory-ref="entityManagerFactory"/>
+    <jpa:repositories base-package="com.sylar.**.dao" transaction-manager-ref="transactionManager" entity-manager-factory-ref="entityManagerFactory"/>
 
 
 </beans>
