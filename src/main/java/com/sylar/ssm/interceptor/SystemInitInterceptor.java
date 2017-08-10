@@ -66,6 +66,7 @@ public class SystemInitInterceptor implements HandlerInterceptor {
 		if (!flag) {
 			//拦截成功，请求地址不符合要求，这里进行不符合操作，比如跳转到某个错误页面
 			System.out.println("--------------------------------该请求地址：" + requestUrl + ",被拦截器拦截.");
+			response.sendRedirect("/admin/sysUserController/filterd.do");
 		}
 		
 		// 返回 true 则直接符合当前拦截器要求，无需拦截

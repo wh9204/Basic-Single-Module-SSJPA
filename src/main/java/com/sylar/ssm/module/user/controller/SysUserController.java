@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-@RequestMapping("/sysUserController")
+@RequestMapping("/admin/sysUserController")
 public class SysUserController {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(SysUserController.class);
@@ -74,6 +74,9 @@ public class SysUserController {
 		SysUser user = sysUserService.findBySysUserId(userId);
 		return user;
 	}
-	
-	
+
+	@RequestMapping("/filterd")
+	public String filterd(){
+		return  "filter";
+	}
 }

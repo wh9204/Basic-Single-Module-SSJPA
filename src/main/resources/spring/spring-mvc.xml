@@ -31,6 +31,8 @@
                         
                         <!-- 配置在Controller上路径，其下所有方法都忽略 -->
                         <value>/sysUserController/**</value>
+                       <!-- <value>/sysUserController/filterd</value>-->
+
                     </list>
                 </property>
             </bean>

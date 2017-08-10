@@ -48,10 +48,12 @@ public interface SysUserService {
 	
 	// 使用了 Top 2，取出结果集的前2个，使用 First 也可以，效果一样
 	List<SysUser> findTop2BySysUserIsDelete(String sysUserIsDelete, Sort sort);
-	
+
 	void deleteBySysUserId(Long sysUserId);
 	
 	List<SysUser> findIsNotDeleteUserListToTestEhCache(String sysUserIsDelete);
 	
 	void deleteInBatch(List<SysUser> sysUserList);
+
+
 }
